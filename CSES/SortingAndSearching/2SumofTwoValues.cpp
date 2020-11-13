@@ -4,21 +4,20 @@ using namespace std;
 
 #define endl '\n'
 #define ll long long
-const int maxi = 2e5+10;
+const int maxi = 2e5+12;
 int a[maxi];
 
 int main(){
   ios::sync_with_stdio(0); cin.tie(0); 
   int n, m; 
   cin>>n>>m;
-  unordered_map<int,int>s;
+  unordered_map<ll ,ll>s;
   for(int i=0;i <n; i++){
     cin>>a[i];
   }
   for(int i=0; i<n;i++){
-    int ai=a[i];
+    ll ai=a[i];
     if(s.count(m-a[i])){
-      //cout<<i+1<<" "<<s.count(m-a[i])+1<<endl;
       cout<<i+1<<" "<<s[m-a[i]]+1<<endl;
       return 0;
     }else{
