@@ -64,24 +64,25 @@ int main(){
   kosaraju conex(n);
   int a, b;
   for(int i=0; i<m; i++){
-    cin>>a>>b; a--; b--;
+    cin>>a>>b; //a--; b--;
     conex.add_edge(a,b);
   }
   conex.start();
-  if(conex.cont==1){
-    cout<<"YES"<<endl;
-  }else{
-    cout<<"NO"<<endl;
-    for(int i=0; i<n; i++){
-      if(conex.comp[i]==0){
-        a = i+1;
-      }
-      if(conex.comp[i]==1){
-        b = i+1;
-      }
-    }
-    cout<<b<<" "<<a<<endl;
-  }
+  cout<<conex.cont<<endl;
+ // if(conex.cont==1){
+ //   cout<<"YES"<<endl;
+ // }else{
+ //   cout<<"NO"<<endl;
+    //for(int i=0; i<n; i++){
+    //  if(conex.comp[i]==0){
+    //    a = i+1;
+    //  }
+    //  if(conex.comp[i]==1){
+    //    b = i+1;
+    //  }
+    //}
+   // cout<<b<<" "<<a<<endl;
+  //}
   return 0;
 }
 
