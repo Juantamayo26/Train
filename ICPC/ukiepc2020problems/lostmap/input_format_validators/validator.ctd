@@ -1,0 +1,4 @@
+INT(1, 4*10^5, n) SPACE INT(1, n-1, m) NEWLINE
+REP(n + m)
+	REGEX("\?|(n|e|s|w) (1|2|3|4|5|6|7)") NEWLINE
+END

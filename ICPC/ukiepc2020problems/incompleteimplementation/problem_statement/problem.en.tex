@@ -1,0 +1,90 @@
+\problemname{Incomplete Sort}
+
+%\illustration{0.3}{image.jpg}{CC BY 2.0 By X on Y}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\providecommand\maxn{}
+\renewcommand{\maxn}{10^5}
+
+Merge sort is a sorting algorithm. It works by splitting an array in half, sorting both halves recursively and then merging those halves together to sort the entire array. Your friend is working on an implementation of the merge sort algorithm, but unfortunately he is not quite there yet: he can only sort half of the array! In great despair he turns to you for help: can you use his unfinished code to write an algorithm that sorts an array completely?
+
+In its current state, your friend's code is a sorting function that can be run on arbitrary sub-arrays, as long
+as it is precisely half as long as the original array. It then correctly sorts this sub-array. You decide to
+play around with this function, so you start with a jumbled array and try to sort it (see figure).
+After choosing $3$ sub-arrays and using them as input for the sorting function, you end
+up with a sorted array. Interestingly, it seems that no matter what the original array you use is, you can always sort it completely by invoking your friend's sorting function only $3$ times. You decide that this makes for a good challenge: you want to extend the code to work for a full array, making at most three calls to the sorting function.
+
+Now you need to figure out which sub-arrays to sort!
+Given an array of length $n$, output at most three sub-arrays of length $\tfrac{1}{2}n$
+so that sorting these sub-arrays in order will result in a sorted array.
+It is guaranteed that this is always possible.
+
+\begin{figure}[h]
+%\newcolumntype{C}{>{\hfil$}p{.2cm}<{$\hfil}}
+\begin{align*}
+\begin{array}{ccc}
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+3 & 8 & 4 & 7 & 1 & 5 & 2 & 6 \\
+\hline
+\end{array}
+& \Longrightarrow&
+\begin{array}{|c|c|c|c|c|c|c|c|c|}
+\hline
+3 & 4 & 5 & 7 & 1 & 6 & 2 & 8 \\
+\hline
+\end{array} \\
+\downarrow & \phantom\sum & \uparrow \\
+\hspace{0.5625cm}
+\begin{array}{|c|c|}
+\hline
+8  & 4 \\
+\hline
+\end{array} 
+\hspace{1.125cm}
+\begin{array}{|c|}
+\hline 5 \\ \hline
+\end{array} 
+\hspace{0.5625cm}
+\begin{array}{|c|}
+\hline 6 \\ \hline
+\end{array} 
+& \longrightarrow &
+\hspace{0.5625cm}
+\begin{array}{|c|c|}
+\hline
+4  & 5 \\
+\hline
+\end{array} 
+\hspace{1.125cm}
+\begin{array}{|c|}
+\hline 6 \\ \hline
+\end{array} 
+\hspace{0.5625cm}
+\begin{array}{|c|}
+\hline 8 \\ \hline
+\end{array} 
+\end{array}
+\end{align*}
+\caption{First sorting step of sample output 1}
+\end{figure}
+\vspace{-1.0cm}
+%The input consists of an unsorted integer array of length 4n (where n < 5*10^4). Every move, you can choose exactly 2n elements of the array and those elements will be sorted in place. For example, if the array is equal to [4, 8, 2, 6, 7, 3, 1, 5] and you choose the elements 1, 2, 3 and 4 this results in the array [1, 8, 2, 6, 7, 3, 4, 5]. Output a sequence of moves which fully sorts the array. Due to efficiency constraints, you can use at most 3 moves. If it is impossible to sort the array in 3 moves, output "impossible".
+
+\section*{Input}
+	\begin{itemize}
+		\item One line containing a single integer $n$ ($4\leq n\leq \maxn$) divisible by $4$, the length of the array.
+		\item One line containing $n$ unique integers $a$ ($1\leq a \leq n$), the array to be sorted.
+	\end{itemize}
+
+\section*{Output}
+	The output consists of:
+	\begin{itemize}
+		\item One line containing the number of function calls $f$ ($0\leq f \leq 3$).
+		\item $f$ lines, each containing $\tfrac{1}{2}n$ unique integers $i$ ($1\leq i \leq n$), the indices determining
+			the sub-array to be sorted at each of the function calls.
+	\end{itemize}
+	If there are multiple valid solutions, you may output any one of them.
+	You do not have to minimise $f$.
+

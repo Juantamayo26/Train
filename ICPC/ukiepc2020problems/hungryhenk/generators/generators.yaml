@@ -1,0 +1,26 @@
+solution: /submissions/accepted/maarten_random_line.py
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+  secret:
+    type: directory
+    data:
+      100x1:
+      100xa:
+      1x1:
+      1x42:
+      2x2:
+      all-same-lines-random-order:
+      all-same-lines:
+      full-1: gen_full.py {seed:1}
+      full-2: gen_full.py {seed:2}
+      full-3: gen_full.py {seed:3}
+      full-4: gen_full.py {seed:4}
+      random-1: input_validator --generate {seed:1}
+      random-2: input_validator --generate {seed:2}
+      random-3: input_validator --generate {seed:3}
+      random-4: input_validator --generate {seed:4}

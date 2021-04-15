@@ -1,0 +1,8 @@
+INT(1,1000,n) NEWLINE
+
+REP(3)
+  REP(n, SPACE)
+    INT(0, 10^6)
+  END
+  NEWLINE
+END

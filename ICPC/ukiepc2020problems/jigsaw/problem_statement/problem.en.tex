@@ -1,0 +1,43 @@
+\problemname{Jigsaw}
+
+
+You have found an old jigsaw puzzle in the attic of your house, left behind by
+the previous occupants. Because you like puzzles, you decide to put this one
+together. But before you start, you want to know whether this puzzle was left
+behind for a reason. Maybe it is incomplete? Maybe the box contains pieces from
+multiple puzzles? 
+
+If it looks like a complete puzzle, you also need to know how big your work
+surface needs to be. Nothing worse than having to start a jigsaw over because
+you started on a small table.
+
+The box does not tell you the dimensions $w \times h$ of the puzzle, but you can
+quickly count the three types of pieces in the box:
+\begin{itemize}
+	\item
+		Corner pieces, which touch two of the edges of the puzzle.
+	\item
+		Edge pieces, which touch one of the edges of the puzzle.
+	\item
+		Centre pieces, which touch none of the edges of the puzzle.
+\end{itemize}
+
+Do these pieces add up to a complete jigsaw puzzle? If so, what was the original
+size of the jigsaw puzzle?
+
+
+\section*{Input}
+	\begin{itemize}
+		\item
+			One line containing three integers $c$, $e$, and $m$
+			($0\leq c,e,m\leq10^9$), the number of corner pieces,
+			edge pieces, and centre pieces respectively.
+	\end{itemize}
+
+\section*{Output}
+	If there exist numbers $w$ and $h$ satisfying $w\geq h\geq 2$ such that the original size of
+	the jigsaw puzzle could have been $w\times h$, then output a single
+	line containing $w$ and $h$.
+	Otherwise, output ``\texttt{impossible}''.
+
+	If there are multiple valid solutions, you may output any one of them.

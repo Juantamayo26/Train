@@ -1,0 +1,77 @@
+solution: /submissions/accepted/freek.cpp
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+      '3':
+  secret:
+    type: directory
+    data:
+      random-possible-1: freek-generator.cpp 1000 250 400 10000000 0 1
+      random-possible-2: freek-generator.cpp 1000 250 400 10000000 0 2
+      random-possible-3: freek-generator.cpp 1000 250 400 10000000 0 3
+      random-mutated-1: freek-generator.cpp 1000 250 400 10000000 20 1
+      random-mutated-2: freek-generator.cpp 1000 250 400 10000000 20 2
+      random-mutated-3: freek-generator.cpp 1000 250 400 10000000 20 3
+      fuzz-1: freek-generator.cpp 1000 200 400 13000000 10 724670366
+      fuzz-2: freek-generator.cpp 1000 200 400 13000000 0 394473245
+      linear-500-impossible: linear.py 1000 0 500 1 0 1000 2
+      linear-333-expand-3: linear.py 1000 0 666 2 2 1001 3
+      linear-333-shrink: linear.py 1000 2 1001 3 0 333 1
+      linear-250-expand: linear.py 1000 0 250 1 251 1001 3
+      linear-250-expand-rev: linear.py 1000 750 1000 1 0 750 3
+      linear-200-expand: linear.py 1000 0 200 1 401 1001 3
+      linear-200-expand-rev: linear.py 1000 800 1000 1 0 600 3
+      max: linear.py 1000 0 1000 1 0 1000 1
+      infinite-loop-1: freek-generator.cpp 20 2 8 1000 3 981812395
+      infinite-loop-2: freek-generator.cpp 20 2 8 1000 3 588505731
+      infinite-loop-3: freek-generator.cpp 11 2 4 200 3 415451715
+      infinite-loop-4: freek-generator.cpp 11 2 4 200 3 176952332
+      border-both:
+      border-left:
+      border-right:
+      close-but-possible:
+      close-easiest:
+      close-simpler:
+      fixed:
+      fixed-impossible:
+      fixed-impossible-2:
+      fixed-minimal:
+      hard:
+      hard-impossible-1:
+      hard-impossible-2:
+      hard-impossible-3:
+      hard-impossible-4:
+      hard-possible:
+      infinite-loop:
+      linear-400-compress:
+      linear-400-expand:
+      linear-400-expand-rev:
+      linear-500-2:
+      minimal:
+      minimal-2:
+      minimal-3:
+      minimal-4:
+      minimal-5:
+      random-1:
+      random-2:
+      random-3:
+      random-4:
+      random-5:
+      random-6:
+      random-7:
+      social-distancing-left:
+      social-distancing-left-big:
+      social-distancing-left-big-2:
+      social-distancing-left-big-2-impossible:
+      social-distancing-left-big-impossible:
+      social-distancing-middle-big:
+      social-distancing-middle-big-impossible:
+      social-distancing-right:
+      social-distancing-right-big:
+      social-distancing-right-big-2:
+      social-distancing-right-big-2-impossible:
+      social-distancing-right-big-impossible:

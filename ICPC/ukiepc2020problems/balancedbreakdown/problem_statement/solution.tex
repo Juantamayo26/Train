@@ -1,0 +1,22 @@
+% TODO: Remove this comment when you write actual solutions.
+\begin{frame}
+	\frametitle{\problemtitle}
+    \begin{itemize}
+		\item Problem: write a number as sum of $\leq 10$ `balanced' (palindrome) numbers.
+		\pause
+		\item Idea: construct the biggest balanced number less than $n$ greedily.
+		\item Example:
+			\begin{align*}
+				n &= 970\,894\,988\,875\,162\,603 \\
+				p_1 &= \textcolor{red}{970\,894\,98}7\,7\textcolor{red}{89\,498\,079} \\
+				n - p_1 &= \textcolor{white}{000\,000\,00}\textcolor{black}{1\,085\,664\,524} \\
+					\cline{0-1}
+				p_2 &= \textcolor{white}{000\,000\,00}\textcolor{blue}{1\,085\,}55\textcolor{blue}{5\,801} \\
+				n - p_1 - p_2 &= \textcolor{white}{000\,000\,000\,000\,}108\,723 \\
+				\dots.
+			\end{align*}
+		\item Possible edge case: $n = 10^\ell$: $p = n-1$.
+		\pause
+		\item To get $k \leq 5$: run a brute force to express $n$ as sum of three balanced numbers when $n \leq 200\,000$.
+    \end{itemize}
+\end{frame}

@@ -1,0 +1,39 @@
+Generators
+
+
+
+
+
+
+
+
+The volcanic island of Fleeland has never had a proper electric net, but finally the administration of the island
+have agreed to build the island's power plants and network.
+
+On the island's coast are its  cities. The administration has surveyed the cities and proposed  of them as possible
+locations for a power plant, with the th proposal stating that the company can build a plant in city  for
+cost .
+
+These power plants are very modern and a single plant could power the whole island, but the volcano makes building
+power lines across the island a dangerous affair. For , the company can build power lines between
+cities  and  for a cost of , and between cities  and  for a cost of .
+A city will receive power if it contains a power plant or is connected to a city with a power plant via power
+lines.
+
+What is the cheapest way to power all the cities on the island?
+
+Input
+	
+		One line containing two integers  () and  (), the
+			number of cities and the number of possible locations for a power plant.
+		Then follow  lines, the th of which contains  () and  (
+), the th possible location for a power plant, and the cost to build it.
+
+		Then follows a line containing  integers  (), the costs of
+			building the power lines.
+	
+  The values of  are unique and given in strictly increasing order.
+
+Output
+	Output the minimal cost of powering all cities on the island.
+

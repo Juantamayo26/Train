@@ -1,0 +1,43 @@
+Elevator Pitch
+
+
+
+
+
+
+
+
+You are in charge of ensuring all building designs meet accessibility requirements.
+As law dictates, every part of your building should be reachable for wheelchair users, which means elevators will have to be installed.
+You are given the blueprints of the company's current project and have to determine the minimum number of elevators required.
+
+The floor plan is laid out on a square grid and the blueprints tell you the number of floors above any given square.
+You can place an elevator at any square, which stops at all floors of that
+square.
+A wheelchair user can move up and down between floors using the elevators and
+can freely move to any of the four adjacent squares on the same
+floor. Buildings do not connect diagonally.
+
+The image below shows the second sample input. Designs can consist of
+multiple buildings; this one contains three buildings. The design requires two
+elevators: one for the pyramid-shaped building and one for the tall tower. The
+small building of height one does not require an elevator, since it only has a
+ground floor.
+
+
+
+
+
+
+
+
+Input
+	
+		One line containing integers  and  (), the height and width of the grid.
+		 lines of  integers each, where  (),
+			the th integer on the th line, denotes the number of floors at position  of the grid.
+	
+
+Output
+    Output the minimum number of elevators you need to build to be able to reach every part of the building(s) in the grid.
+

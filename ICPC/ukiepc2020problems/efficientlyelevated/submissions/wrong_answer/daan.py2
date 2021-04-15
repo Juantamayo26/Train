@@ -1,0 +1,24 @@
+from collections import deque
+h, w = [ int(p) for p in raw_input().split() ]
+grid = [ [ int(p) for p in raw_input().split() ] for y in range(h) ]
+queue = sorted([ (grid[y][x],y,x) for x in range(w) for y in range(h) ])
+qp = len(queue)
+elevators = 0
+
+while qp > 0:
+	qp -= 1
+	(p,y,x) = queue[qp]
+	if grid[y][x] <= 0:
+		continue
+	elevators += 1
+	fillqueue = deque([(y,x)])
+	grid[y][x] = -grid[y][x]
+	while fillqueue:
+		(b,a) = fillqueue.pop()
+		p = -grid[b][a]
+		for v,u in [ (b,a-1), (b,a+1), (b-1,a), (b+1,a) ]:
+			if 0 <= u < w and 0 <= v < h and 0 < grid[v][u] <= p:
+				grid[v][u] = - grid[v][u]
+				fillqueue.append((v,u)) 
+
+print elevators

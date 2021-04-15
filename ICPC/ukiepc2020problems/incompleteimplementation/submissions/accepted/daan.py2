@@ -1,0 +1,25 @@
+import sys
+
+n4 = int( sys.stdin.readline() )
+n2 = n4 // 2
+L = dict( enumerate( [0] + map( int, sys.stdin.readline().split() ) ) )
+
+print 3
+for _ in range(3):
+    inv = dict( map( reversed, L.items() ) )
+    C = set()
+    for i in range( 1, n4+1 ):
+        if i != L[i]:
+            c = ( i not in C ) + ( inv[i] not in C )
+            if len(C) + c > n2:
+                break
+            C.add(i)
+            C.add(inv[i])
+    for i in reversed( range( 1, n4+1 ) ):
+        if len(C) == n2:
+            break
+        C.add(i)
+    print ' '.join(map(str,C))
+    A = {L[i] for i in C}
+    for i, j in zip(sorted(C),sorted(A)):
+        L[i] = j

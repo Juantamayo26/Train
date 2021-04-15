@@ -1,0 +1,18 @@
+% NOTE: pdflatex can exceed memory for this plot, so use LuaTex
+\documentclass[tikz, convert = false]{standalone}
+\usetikzlibrary{calc, trees, positioning, arrows, arrows.meta, chains,%
+    shapes, shapes.geometric, shapes.symbols, decorations.pathreplacing,%
+     decorations.pathmorphing, matrix, quotes, patterns, fit}
+
+\begin{document}
+\begin{tikzpicture}
+
+\draw[ultra thick] (0,0) grid[xstep=1, ystep=.5] (4,6);
+
+\foreach \y in {0,...,11}
+    \node at (1.5, 0.5*\y+.25) {\includegraphics[width=.4cm]{warning.pdf}};
+
+%\node[red, rotate=-45] at (2,3) {\sffamily\Huge CORRUPTED};
+
+\end{tikzpicture}
+\end{document}

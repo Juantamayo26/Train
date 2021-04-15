@@ -1,0 +1,30 @@
+% TODO: image showing how a cycle XORs the value of a path with the xor of all the edges in the cycle
+% TODO: shorten explanation & make it more clear!
+
+\begin{frame}
+	\frametitle{\problemtitle}
+    \begin{itemize}
+		\item Problem: given a connected undirected graph, find a path from $a$ to $b$ that minimizes $XOR$ of the values on the edges.
+		\pause
+		\item Observation: walking back and forth does not change the XOR-value since $x \oplus x = 0$.
+		\item
+			When there is a cycle starting from $c$ with XOR-value $v$, we may walk from $a$ to $c$, around the cycle, back to $a$ and then to $b$ giving a value of $w \oplus v$ where $w$ was the value of a path from $a$ to $b$.
+
+			Let $c_1, \dots, c_{\ell}$ be cycles in the graph, with XOR-values $v_1, \dots, v_{\ell}$ and $w$ value of some path from $a$ to $b$.
+			Goal:
+			\[
+				\text{minimize} \quad w \oplus \bigoplus_{1 \leq i \leq \ell} b_i v_i \qquad (b_i \in \{0,1\}).
+			\]
+		\pause
+		\item
+			Note: this is an equation over $\mathbb{F}_2$ and the $v_i$ can be reduced with Gaussian Elimination giving $64$ values.
+		\item
+			See $v_i$ as vectors in $\mathbb{F}_2^{64}$ by writing $v_i$ in base 2.
+		\item
+			The linear combinations form a subspace of dimension at most $64$: find a basis, which has at most $64$ elements.
+		\item
+			Now, given an initial path $w$, for $i$ from 63 to $0$, look if $w$ has a $1$ in the $i$th binary digit and check if there is a basis element with $i$ as most significant digit, in which XOR $w$ with this value.
+		\item
+			At the end, $w$ is minimal.
+    \end{itemize}
+\end{frame}

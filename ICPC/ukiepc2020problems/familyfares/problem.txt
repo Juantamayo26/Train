@@ -1,0 +1,61 @@
+Family Fares
+
+vertex=[auto=left,circle,fill=black!25,minimum size=20pt,inner sep=0pt]
+
+After a long time apart, your family will gather next year for a reunion in an idyllic village in
+the centre of the country. Since everybody lives apart, most will need to travel by train.
+
+You are in charge of finding the best deal on tickets. Everyone must take an optimal route,
+that is to say they may only travel a route if no other route is shorter.
+
+Two types of ticket are available: individual or group. All tickets come with a start
+and destination between which to travel. Individual tickets are unlimited and the price is equal to the
+shortest distance in kilometres between stations.
+
+Group tickets are more complicated. First, you may only buy at most one and it must be for a set list
+of people. There is no limit to the number of people named, but all must be present. The ticket is
+priced according to the number of named persons.
+
+figure[!h]
+
+tikzpicture[scale=0.6]
+    [vertex] (n1) at (0,0) ;
+    [vertex] (n2) at (3,0) ;
+    [vertex] (n3) at (6,0) ;
+    [vertex] (n4) at (9,0) ;
+    [vertex] (n5) at (3,-2) ;
+    [vertex] (n6) at (8,2) ;
+    [vertex] (n7) at (11,2) ;
+  
+    [line width=1.5pt] (n1) -- (n2) node [midway,above] ;
+    [line width=1.5pt] (n2) -- (n3) node [midway,above] ;
+    [red,dashed,line width=1.5pt,transform canvas=yshift=2pt] (n3) -- (n4) node [midway,above] ;
+    [line width=1.5pt,dashed,green,transform canvas=yshift=-2pt] (n3) -- (n4) node [midway,above] ;
+    [line width=1.5pt,dashed,blue,transform canvas=yshift=-3pt] (n3) -- (n6) node [midway,above] ;
+    [line width=1.5pt] (n3) -- (n4) node [midway,above] ;
+    [line width=1.5pt](n3) -- (n6) node[xshift=-3pt] [midway,above] ;
+    [line width=1.5pt](n6) -- (n7) node [midway,above] ;
+    [line width=1.5pt,dashed,blue,transform canvas=yshift=-2pt] (n6) -- (n7) node [midway,above] ;
+    [line width=5pt](n1) -- (n5) node[xshift=-4pt,yshift=-1pt] [midway,left] ;
+    [line width=1.5pt,dashed,orange,transform canvas=yshift=3pt,xshift=3pt] (n1) -- (n5) node [midway,above] ;
+    [line width=5pt](n5) -- (n3) node[xshift=-3pt] [midway,left] ;
+    
+tikzpicture
+Sample 2. Group or individual tickets are shown by thick or thin lines, respectively.
+figure
+
+
+Input
+	itemize
+		One line with four integers:  (), the number of stations, 
+			(), the number of connections between stations,  (),
+			the number of family members, and  (), the cost per person of a group ticket.
+		One line with  integers  (), meaning that family member  starts at station .
+		 further lines, each with three integers , , and  (, , and ),
+			indicating that there is a bidirectional connection between stations  and  with a length of  kilometres.
+	itemize
+  Each pair of distinct stations has at most one direct connection and every station can be reached from any other station.
+  Station number  serves the idyllic village.
+
+Output
+	Output the total amount you must spend so that every family member can travel from their starting station to the idyllic village.

@@ -1,0 +1,9 @@
+INT(4, 10^5, n) NEWLINE
+ASSERT(n % 4 == 0)
+
+REPI(i, n, SPACE)
+  INT(1, n, a[i])
+END
+NEWLINE
+
+ASSERT(UNIQUE(a))

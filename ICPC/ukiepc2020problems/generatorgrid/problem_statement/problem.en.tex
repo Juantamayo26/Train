@@ -1,0 +1,39 @@
+\problemname{Generators}
+
+%\illustration{0.3}{image.jpg}{CC-BY 2.0 By X on Y}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\providecommand\maxn{}\renewcommand{\maxn}{10^5}
+\providecommand\maxc{}\renewcommand{\maxc}{10^9}
+
+The volcanic island of Fleeland has never had a proper electric net, but finally the administration of the island
+have agreed to build the island's power plants and network.
+
+On the island's coast are its $n$ cities. The administration has surveyed the cities and proposed $m$ of them as possible
+locations for a power plant, with the $i$th proposal stating that the company can build a plant in city $c_i$ for
+cost $a_i$.
+
+These power plants are very modern and a single plant could power the whole island, but the volcano makes building
+power lines across the island a dangerous affair. For $1 \leq i < n$, the company can build power lines between
+cities $i$ and $i+1$ for a cost of $b_i$, and between cities $n$ and $1$ for a cost of $b_n$.
+A city will receive power if it contains a power plant or is connected to a city with a power plant via power
+lines.
+
+What is the cheapest way to power all the cities on the island?
+
+\section*{Input}
+	\begin{itemize}
+		\item One line containing two integers $n$ ($3\leq n \leq \maxn$) and $m$ ($1\leq m \leq n$), the
+			number of cities and the number of possible locations for a power plant.
+		\item Then follow $m$ lines, the $i$th of which contains $c_i$ ($1 \leq c_i \leq n$) and $a_i$ ($1
+			\leq a_i \leq \maxc$), the $i$th possible location for a power plant, and the cost to build it.
+
+		\item Then follows a line containing $n$ integers $b_i$ ($1 \leq b_i \leq \maxc$), the costs of
+			building the power lines.
+	\end{itemize}
+  The values of $c_{1,\ldots,n}$ are unique and given in strictly increasing order.
+
+\section*{Output}
+	Output the minimal cost of powering all cities on the island.
+

@@ -1,0 +1,18 @@
+% TODO: Remove this comment when you write actual solutions.
+\begin{frame}
+	\frametitle{\problemtitle}
+    \begin{itemize}
+		\item Idea: starting at the last team fill in the corrupted column conservatively.
+		\item The last team solved $p_n=1$ problem.
+		\item For $i=n-1, \ldots, 1$
+		$$p_i=\begin{cases}
+      p_{i+1}, & \text{if}\ t_i \leq t_{i+1} \\
+      p_{i+1}+1, & \text{else.}
+    \end{cases}$$
+    	\item If $p_1 = p$, then the scoreboard is non-ambiguous.
+    	\item Else $p_1:=p$ gives a different correct scoreboard, so ambiguous.
+    	\item Note: teams with a time penalty of $0$ always solved $0$ problems.
+    	\item Note: if no team has solved any problem the scoreboard is non-ambiguous.
+    	\item Solution: $O(n)$.
+    \end{itemize}
+\end{frame}

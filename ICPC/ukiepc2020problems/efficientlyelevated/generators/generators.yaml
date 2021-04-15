@@ -1,0 +1,46 @@
+solution: /submissions/accepted/mees.py
+
+gitignore_generated: true
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+      '3':
+
+  secret:
+    type: directory
+    data:
+      random-1: input_validator --generate {seed} 1
+      random-2: input_validator --generate {seed} 2
+      random-3: input_validator --generate {seed} 3
+      random-4: input_validator --generate {seed} 4
+      large_grid_constant_0: constant-grid.py 500 500 0
+      large_grid_constant_1: constant-grid.py 500 500 1
+      large_grid_constant_4: constant-grid.py 500 500 4
+      large_grid_constant_1e9: constant-grid.py 500 500 1000000000
+      minimal: constant-grid.py 1 1 0
+      minimal-2: constant-grid.py 1 1 1
+      minimal-3: constant-grid.py 1 1 1000000000
+      constant-row: constant-grid.py 1 500 1
+      constant-col: constant-grid.py 500 1 0
+      checker-small: checker.py 15 15 2 0
+      checker-largest: checker.py 500 500 1000000000 999999999
+      spiral-big: spiral.py 500 500
+      spiral-thin: spiral.py 35 500
+      zigzag-lr: zigzag.py 500 500
+      zigzag-ud: zigzag-updown.py 500 500
+      random-circles-1: random-circles.py 500 500 10 0
+      random-circles-2: random-circles.py 500 500 10 1
+      random-circles-3: random-circles.py 500 500 10 2
+      random-circles-4: random-circles.py 500 500 50 0
+      random-circles-5: random-circles.py 500 500 50 1
+      random-circles-6: random-circles.py 500 500 50 2
+      random-up-to-10-1: random-short-range.py 500 500 10 0
+      random-up-to-10-2: random-short-range.py 500 500 10 1
+      random-up-to-2-1: random-short-range.py 500 500 2 0
+      random-up-to-2-2: random-short-range.py 500 500 2 1
+      random-up-to-3-1: random-short-range.py 500 500 3 0
+      random-up-to-4-1: random-short-range.py 500 500 4 0

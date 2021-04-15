@@ -1,0 +1,26 @@
+Haughty Cuisine
+
+As a waiter, your favourite question from an indecisive punter is ``I'm not sure, what would
+you recommend?'' --- so much so, in fact, that you decided to automate away the answer to
+avoid having to spend any brain cycles on this question ever again.
+
+You have the list of all set menus for today and you are going to simply pick one at random.
+As long as your recommendation corresponds to a list of items on a set menu, everything will
+be fine.
+
+Input
+    itemize
+        One line containing a single integer ,
+            the number of set menus.
+         lines, one for each menu.
+            Each of these lines contains a single integer ,
+            followed by a list of  dishes that the meal consists of.
+    itemize
+    Each dish is described using at most  lowercase Latin characters.
+
+Output
+	Output one line containing , the number of dishes that you recommend, followed by  lines
+  containing the dishes you recommend.
+
+  If there are multiple possible solutions, you may output any one of them.
+

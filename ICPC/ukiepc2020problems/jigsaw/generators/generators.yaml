@@ -1,0 +1,58 @@
+solution: /submissions/accepted/ludo.cpp
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+      '3':
+      '4':
+  secret:
+    type: directory
+    data:
+
+      1x1:
+      2x2: from-answer.py 2 2
+      3x3: from-answer.py 3 3
+      2x3: from-answer.py 2 3
+      3x4: from-answer.py 3 4
+
+      largest-square:
+      largest-impossible-square:
+      long-rectangle:
+      long-impossible-rectangle:
+
+      empty:
+      maximal:
+      maximal-4-corners:
+
+      wrong-corners-1:
+      wrong-corners-2:
+      wrong-corners-3:
+
+      random-1: input_validator --generate {seed:1}
+      random-2: input_validator --generate {seed:2}
+      random-3: input_validator --generate {seed:3}
+      random-4: input_validator --generate {seed:4}
+
+      random-4-corners-1: random-4-corners.py {seed:1}
+      random-4-corners-2: random-4-corners.py {seed:2}
+      random-4-corners-3: random-4-corners.py {seed:3}
+      random-4-corners-4: random-4-corners.py {seed:4}
+
+      random-possible-1: random-possible.py {seed:1}
+      random-possible-2: random-possible.py {seed:2}
+      random-possible-3: random-possible.py {seed:3}
+      random-possible-4: random-possible.py {seed:4}
+      random-possible-5: random-possible.py {seed:5}
+      random-possible-6: random-possible.py {seed:6}
+      random-possible-7: random-possible.py {seed:7}
+      random-possible-8: random-possible.py {seed:8}
+      random-possible-9: random-possible.py {seed:9}
+      random-possible-10: random-possible.py {seed:10}
+
+      prime-1:
+      prime-2:
+      prime-3:
+      prime-4:

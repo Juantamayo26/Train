@@ -1,0 +1,15 @@
+\begin{frame}
+	\frametitle{\problemtitle}
+    \begin{itemize}
+		\item Problem : From which station to buy the group ticket, so that the sum of the tickets is minimal 
+    \item Step 1 : Compute shortest path DAG starting in Delft (station 1)
+    \item Step 2 : Compute total cost of tickets without a group ticket
+    \item Step 3a : For every family member mark all stations which are on shortest paths from starting point to Delft 
+      \begin{itemize}
+        \item NB : If there are multiple shortest paths, mark the vertices on all of them!
+      \end{itemize}
+    \item Step 3a (for higher p) : Do this in one sweep by having a bitset at every station.
+    \item Step 4 : Loop over all station and compute total cost when having a group ticket at that node
+    \item Step 5 : Output cheapest option
+    \end{itemize}
+\end{frame}

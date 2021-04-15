@@ -1,0 +1,54 @@
+solution: /submissions/accepted/timon.cpp
+
+gitignore_generated: true
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+      '3':
+  secret:
+    type: directory
+    data:
+      line-500: line.py 500 100 250 {seed}
+      line-1000: line.py 1000 100 250 {seed}
+      line-1000-far-away: line.py 1000 100 123 {seed}
+      line-max: line-max.py
+      double-line-max: double-line-max.py
+      kill-unique:
+      no-group-ticket-1:
+      no-group-ticket-2:
+      single-person:
+      smallest:
+      secret-2:
+      secret-3:
+      large-dag-1: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 1010 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-2: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 1050 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-3: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-4: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 1200 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-5: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 1500 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-6: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 5000 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-7: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 10000 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-8: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 50000 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-1: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 1 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-2: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 50 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-3: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 150 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-4: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 250 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-5: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 500 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-6: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 1000 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-dag-cost-7: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 10000 --min_w 1 --max_w 100 --dag_size 1100 --min_add 1 --max_add 50 --seed {seed}
+      large-tree-1: large-dag-graph.py --n 1000 --m 999 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 999 --min_add 0 --max_add 0 --seed {seed}
+      large-tree-2: large-dag-graph.py --n 1000 --m 999 --p 100 --g 100 --min_w 1 --max_w 1000 --dag_size 999 --min_add 0 --max_add 0 --seed {seed}
+      large-tree-3: large-dag-graph.py --n 1000 --m 999 --p 100 --g 100 --min_w 1 --max_w 2000 --dag_size 999 --min_add 0 --max_add 0 --seed {seed}
+      large-tree-4: large-dag-graph.py --n 1000 --m 999 --p 100 --g 100 --min_w 1000 --max_w 10000 --dag_size 999 --min_add 0 --max_add 0 --seed {seed}
+      large-tree-extra: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 999 --min_add 1 --max_add 100 --seed {seed}
+      large-weights-1: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 1000 --min_w 1 --max_w 10000 --dag_size 1200 --min_add 0 --max_add 1000000 --seed {seed}
+      large-weights-2: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 10000 --min_w 1 --max_w 10000 --dag_size 1200 --min_add 0 --max_add 1000000 --seed {seed}
+      max-routes-1: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 100 --dag_size 100000 --min_add 0 --max_add 0 --seed {seed}
+      max-routes-2: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 100 --min_w 1 --max_w 1000 --dag_size 100000 --min_add 0 --max_add 0 --seed {seed}
+      max-routes-3: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 500 --min_w 1 --max_w 10000 --dag_size 100000 --min_add 0 --max_add 0 --seed {seed}
+      max-g: large-dag-graph.py --n 1000 --m 100000 --p 100 --g 1000000 --min_w 1 --max_w 100000 --dag_size 100000 --min_add 0 --max_add 0 --seed {seed}
+      max-g-2: large-dag-graph.py --n 1000 --m 10000 --p 50 --g 1000000 --min_w 1 --max_w 1000000 --dag_size 100000 --min_add 0 --max_add 0 --seed {seed}
+      big-answer: big-answer.py

@@ -1,0 +1,57 @@
+solution: /submissions/accepted/boas.py
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+  secret:
+    type: directory
+    data:
+      '3':
+      '4':
+      zero-edge-case-1:
+      zero-edge-case-2:
+      one-solved:
+      zero-edge-case: allzero.py
+      decreasing: decreasing.py 10000
+      increasing: increasing.py 10000
+      rand-1: rand.py {seed} 100 10 1000000 1
+      rand-2: rand.py {seed} 10000 100 1000000 1
+      rand-3: rand.py {seed} 10000 100 1000000 0
+      rand-4: rand.py {seed} 10000 1000 1000000 0
+      rand-5: rand.py {seed} 10000 1 1000000 0
+      rand-6: rand.py {seed} 10000 3 1000000 1
+      all-equal-1: rand.py {seed} 10000 100 1 1
+      all-equal-2: rand.py {seed} 10000 1 1 1
+      all-equal-3: rand.py 1 10000 1 1 0
+      many-equal-2: rand.py {seed} 10000 100 10 0
+      random-uni-1: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 1000000 --offset 0 --seed {seed:1}
+      random-amb-1: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 1000000 --offset 1 --seed {seed:1}
+      random-uni-2: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 10000 --offset 0 --seed {seed:2}
+      random-amb-2: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 10000 --offset 1 --seed {seed:2}
+      random-uni-3: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 100 --offset 0 --seed {seed:3}
+      random-amb-3: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 100 --offset 1 --seed {seed:3}
+      random-offset-amb-1: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 1000000 --offset 1 --seed {seed:4}
+      random-offset-amb-2: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 1000000 --offset 2 --seed {seed:5}
+      random-offset-amb-3: rand_spec_offset.py --n 10000 --max_zeroes 100 --max_time 1000000 --offset 10000 --seed {seed:8}
+      random-zeroes-uni-1: rand_spec_offset.py --n 10000 --max_zeroes 500 --max_time 1000000 --offset 0 --seed {seed:11}
+      random-zeroes-amb-1: rand_spec_offset.py --n 10000 --max_zeroes 1000 --max_time 1000000 --offset 1 --seed {seed:11}
+      random-zeroes-uni-2: rand_spec_offset.py --n 10000 --max_zeroes 10000 --max_time 1000000 --offset 0 --seed {seed:12}
+      random-zeroes-amb-2: rand_spec_offset.py --n 10000 --max_zeroes 10000 --max_time 1000000 --offset 1 --seed {seed:12}
+      all-zeroes-10000-1: rand_spec_offset.py --n 10000 --min_zeroes 10000 --max_zeroes 10000 --max_time 1000000 --offset 1 --seed 14
+      all-zeroes-10000-2: rand_spec_offset.py --n 10000 --min_zeroes 10000 --max_zeroes 10000 --max_time 1000000 --offset 2 --seed 15
+      all-zeroes-10-1: rand_spec_offset.py --n 10 --min_zeroes 10 --max_zeroes 10 --max_time 1000000 --offset 1 --seed 17
+      all-zeroes-10-2: rand_spec_offset.py --n 10 --min_zeroes 10 --max_zeroes 10 --max_time 1000000 --offset 10 --seed 18
+      all-zeroes-10-3: rand_spec_offset.py --n 10 --min_zeroes 10 --max_zeroes 10 --max_time 1000000 --offset 623 --seed 19
+      all-zeroes-10-4: rand_spec_offset.py --n 10 --min_zeroes 10 --max_zeroes 10 --max_time 1000000 --offset 7843 --seed 20
+      all-zeroes-10-5: rand_spec_offset.py --n 10 --min_zeroes 10 --max_zeroes 10 --max_time 1000000 --offset 10000 --seed 21
+      random-no-zeroes-uni-1: rand_spec_offset.py --n 10000 --max_zeroes 0 --max_time 1000000 --offset 0 --seed {seed:22}
+      random-no-zeroes-amb-1: rand_spec_offset.py --n 10000 --max_zeroes 0 --max_time 1000000 --offset 1 --seed {seed:22}
+      random-smaller-uni-1: rand_spec_offset.py --n 10 --max_zeroes 2 --max_time 1000 --offset 0 --seed {seed:24}
+      random-smaller-amb-1: rand_spec_offset.py --n 10 --max_zeroes 2 --max_time 1000 --offset 1 --seed {seed:24}
+      random-smaller-uni-2: rand_spec_offset.py --n 10 --max_zeroes 0 --max_time 1000 --offset 0 --seed {seed:25}
+      random-smaller-amb-2: rand_spec_offset.py --n 10 --max_zeroes 0 --max_time 1000 --offset 1 --seed {seed:25}
+      random-smaller-uni-2: rand_spec_offset.py --n 100 --max_zeroes 10 --max_time 1000 --offset 0 --seed {seed:26}
+      random-smaller-amb-3: rand_spec_offset.py --n 100 --max_zeroes 10 --max_time 1000 --offset 1 --seed {seed:26}

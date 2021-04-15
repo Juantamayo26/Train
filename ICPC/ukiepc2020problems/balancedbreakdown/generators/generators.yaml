@@ -1,0 +1,27 @@
+solution: /submissions/accepted/ludo.cpp
+
+data:
+  sample:
+    solution:
+    type: directory
+    data:
+      '1':
+      '2':
+  secret:
+    type: directory
+    data:
+      '10':
+      '21':
+      '1e17':
+      'maxn':
+      'checkpow10':
+      'trippoint':
+      'trippoint2':
+      random-1: input_validator --generate {seed} 1
+      random-2: input_validator --generate {seed} 2
+      random-3: input_validator --generate {seed} 3
+      random-4: input_validator --generate {seed} 4
+      'greedy7-1':
+      'greedy7-2':
+      'greedy7-3':
+      'greedy7-4':

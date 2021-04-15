@@ -1,0 +1,25 @@
+import sys
+sys.setrecursionlimit(1000*1000)
+
+h, w = [ int(p) for p in raw_input().split() ]
+grid = [ [ int(p) for p in raw_input().split() ] for y in range(h) ]
+queue = sorted([ (grid[y][x],y,x) for x in range(w) for y in range(h) ])
+qp = len(queue)
+elevators = 0
+
+def fill( y, x ):
+	p = grid[y][x]
+	grid[y][x] = 0
+	for v,u in [ (y,x-1), (y,x+1), (y-1,x), (y+1,x) ]:
+		if 0 <= u < w and 0 <= v < h and 0 < grid[v][u] <= p:
+			fill( v, u ) 
+
+while qp > 0:
+	qp -= 1
+	(p,y,x) = queue[qp]
+	if grid[y][x] == 0:
+		continue
+	elevators += 1
+	fill( y, x )
+
+print elevators

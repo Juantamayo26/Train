@@ -1,0 +1,84 @@
+solution: /submissions/accepted/ragnar.py
+
+gitignore_generated: true
+
+data:
+  sample:
+    type: directory
+    data:
+      '1':
+      '2':
+      '3':
+  secret:
+    type: directory
+    data:
+      random-4: random_gen.py 4 {seed}
+      random-8: random_gen.py 8 {seed}
+      random-12: random_gen.py 12 {seed}
+      random-16: random_gen.py 16 {seed}
+      random-20: random_gen.py 20 {seed}
+      random-24: random_gen.py 24 {seed}
+      random-100: random_gen.py 100 {seed}
+      random-1000: random_gen.py 1000 {seed}
+      random-10000: random_gen.py 10000 {seed}
+      random-100000-1: random_gen.py 100000 {seed:1}
+      random-100000-1: random_gen.py 100000 {seed:2}
+      random-100000-3: random_gen.py 100000 {seed:3}
+
+      cycle-10000: cycle_gen.py 10000 {seed}
+      cycle-100000: cycle_gen.py 100000 {seed}
+
+      single-move-8: single_move.py 8 {seed}
+      single-move-12: single_move.py 12 {seed}
+      single-move-24: single_move.py 24 {seed}
+      single-move-100: single_move.py 100 {seed}
+      single-move-1000: single_move.py 1000 {seed}
+      single-move-10000: single_move.py 10000 {seed}
+      single-move-100000: single_move.py 100000 {seed}
+
+      two-moves-100: two_moves.py 100 {seed}
+      two-moves-1000: two_moves.py 1000 {seed}
+      two-moves-10000: two_moves.py 10000 {seed}
+      two-moves-100000: two_moves.py 100000 {seed}
+
+      two-moves-2: gen_moves.py 2 8 {seed}
+      two-moves-3: gen_moves.py 2 12 {seed}
+      two-moves-4: gen_moves.py 2 100 {seed}
+      two-moves-5: gen_moves.py 2 100000 {seed}
+
+      three-moves-1: gen_moves.py 3 4 {seed}
+      three-moves-2: gen_moves.py 3 16 {seed}
+      three-moves-3: gen_moves.py 3 10000 {seed}
+      three-moves-4: gen_moves.py 3 100000 {seed:1}
+      three-moves-5: gen_moves.py 3 100000 {seed:2}
+      three-moves-6: gen_moves.py 3 100000 {seed:3}
+
+      two-reversal-2: gen_reversal.py 2 8 {seed}
+      two-reversal-3: gen_reversal.py 2 12 {seed}
+      two-reversal-5: gen_reversal.py 2 100000 {seed}
+
+      three-reversal-2: gen_reversal.py 3 16 {seed}
+      three-reversal-3: gen_reversal.py 3 10000 {seed}
+      three-reversal-4: gen_reversal.py 3 100000 {seed:1}
+      three-reversal-5: gen_reversal.py 3 100000 {seed:2}
+      three-reversal-6: gen_reversal.py 3 100000 {seed:3}
+
+
+      quarters-in-place-1000: quarters_in_place.py 1000 {seed}
+      quarters-in-place-10000: quarters_in_place.py 10000 {seed}
+      quarters-in-place-100000: quarters_in_place.py 100000 {seed}
+      quarters-out-of-place-1000: quarters_out_of_place.py 1000 {seed}
+      quarters-out-of-place-10000: quarters_out_of_place.py 10000 {seed}
+      quarters-out-of-place-100000: quarters_out_of_place.py 100000 {seed}
+
+      id-4: identity.py 4
+      id-16: identity.py 16
+      id-80: identity.py 80
+      id-1200: identity.py 1200
+      id-100000: identity.py 100000
+
+      reversed-4: reverse.py 4
+      reversed-16: reverse.py 16
+      reversed-1200: reverse.py 1200
+      reversed-100000: reverse.py 100000
+

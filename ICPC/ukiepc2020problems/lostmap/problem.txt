@@ -1,0 +1,27 @@
+Lost Map
+
+An amateur Viking historian needs your help finding the silver left by Egill Skallagrímsson, of Egil's saga.
+She has found two old treasure maps that are supposed to lead to it.
+A treasure map is a list of instructions of the form ``direction '',
+	where direction can be ``n'', ``s'', ``e'', or ``w''.
+The maps are sadly old, so some of the instructions are missing and we represent them with a
+simple ``?'' instead.
+
+The first map is larger while the second map is a smaller fragment.
+She wants to know how she can overlay her maps such that they coincide.
+
+Two maps coincide if the corresponding instructions are either identical or at least one of them is lost to time.
+All instructions must have a corresponding instruction on the other map when overlaying the maps.
+
+Input
+itemize
+The first line of the input contains two integers, .
+The next  lines describe the first map with each containing either ``?'', or ``(nsew)''
+      followed by the number of steps  ).
+The next  lines describe the second map with each containing either ``?'', or ``(nsew)''
+      followed by the number of steps  ).
+itemize
+
+Output
+Output the number of indices such that if the second map was overlaid at this
+index on the first map then they would coincide.

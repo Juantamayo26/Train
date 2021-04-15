@@ -1,0 +1,37 @@
+solution: /submissions/accepted/timon.cpp
+
+gitignore_generated: true
+
+data:
+  sample:
+    type: directory
+    data:
+  secret:
+    type: directory
+    data:
+      sweep-20: sweep.py 20 {seed}
+      sweep-40: sweep.py 40 {seed}
+      sweep-58: sweep.py 58 {seed}
+
+      complete-graph-1: complete-graph.py {seed:1}
+      complete-graph-2: complete-graph.py {seed:2}
+      complete-graph-3: complete-graph.py {seed:3}
+
+      everything-minimal-1: everything-minimal.py {seed:1}
+      everything-minimal-2: everything-minimal.py {seed:2}
+      everything-minimal-3: everything-minimal.py {seed:3}
+
+      line-1: line.py 100 {seed}
+      line-2: line.py 8316 {seed}
+      line-3: line.py 10000 {seed}
+
+      different-parts-1: different-parts.py 10000 100000 100000 1000 {seed}
+      different-parts-2: different-parts.py 1000 10000 10000 10 {seed}
+
+      low-cancels-1: low-cancels.py 400 10000 10000 10000 32 {seed}
+      low-cancels-2: low-cancels.py 5000 10000 10000 100 50 {seed}
+      low-cancels-3: low-cancels.py 10000 100000 100000 1000 16 {seed}
+
+      'max-answer':
+      'trivial':
+      all-zero: all-zero.py 10000 50000 25000 {seed}

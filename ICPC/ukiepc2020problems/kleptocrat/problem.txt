@@ -1,0 +1,41 @@
+Kleptocrat
+
+
+
+
+
+
+
+Your company has a policy that every employee should be refunded an amount of money proportional
+to the shortest distance between their home and office. This causes the loophole that many employees
+intentionally move very far away to claim the maximum possible reimbursement.
+
+One employee has taken this policy way too far and is in danger of bankrupting you. You must find a
+way to stop this before cancelling the policy next year. However, the rules are strict: as long as
+the employee keeps track of the distances they have travelled, you are forced to reimburse them.
+
+Suddenly you have a flash of inspiration: nowhere does it say that you have to use the Euclidean
+distances! You start working on more subtle distance functions and now you have a first prototype:
+XOR distance. The length of a path is defined as the XOR of the lengths of the edges on the path
+(as opposed to the sum). The distance between two locations is defined as the length of the shortest
+path between them.
+
+You will need to test this principle on the transport network with the locations of each of your
+employees in turn.
+
+Input
+	
+		One line containing three integers  (),  (), and
+			 (),
+		the number of nodes, edges, and questions respectively.
+		 lines describing an edge.
+		Each line consists of three integers , ,  (,  and ),
+		indicating that there is an undirected edge of length  between nodes  and .
+		 lines describing a question.
+			Each line consists of two integers ,  () asking for the shortest distance between nodes  and .
+	
+
+	Between every pair of distinct nodes, there is at most one edge, and every node can be reached from any other node.
+
+Output
+For every question, output one line containing the shortest distance between nodes  and .
